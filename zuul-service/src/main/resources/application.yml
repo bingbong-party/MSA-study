@@ -1,0 +1,16 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: my-zuul-service
+
+zuul:
+  routes:
+    first-service:
+      #사용자가 요청하는 /first-service/ 어쩌고 모든 요청을 8081 포트로 보내자~
+      path: /first-service/**
+      url: http://localhost:8081
+    second-service:
+      path: /second-service/**
+      url: http://localhost:8082
