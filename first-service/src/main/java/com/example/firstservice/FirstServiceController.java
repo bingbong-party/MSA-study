@@ -16,7 +16,7 @@ import java.util.Collections;
 import java.util.Enumeration;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/first-service")
 public class FirstServiceController {
     @GetMapping("/welcome")
     public String welcome() {
