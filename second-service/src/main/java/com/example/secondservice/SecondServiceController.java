@@ -8,9 +8,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/second-service")
+@Slf4j
 public class SecondServiceController {
     @GetMapping("/welcome")
     public String welcome() {
         return "Welcome to the Second Service.";
+    }
+
+    @GetMapping("/message")
+    public String message(@RequestHeader("second-request") String header) {
+        log.info(header);
+        return "Hello World in Second Service!";
     }
 }
