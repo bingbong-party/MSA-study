@@ -35,3 +35,5 @@ public class CustomFilter extends AbstractGatewayFilterFactory<CustomFilter.Conf
         // Put the configuration properties
     }
 }
+
+
